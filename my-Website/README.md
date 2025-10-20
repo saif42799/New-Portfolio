@@ -1,16 +1,19 @@
-# React + Vite
+# My Portfolio 
+My website: Create Web Portfolio displaying my work for recriters and general audience
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+PPROJECT TECH STACK 
+------------------
+VSCode         - Integrated Development Environment (IDE)  
+React          - Framework 
+Node.js        - open-source, cross-platform JavaScript runtime environment that allows 
+                 developers to execute JavaScript code outside of a web browser   
+Vite           - a modern JavaScript build tool and development server        
+HTML           - Programming languages
+CSS            - Programming languages
+JavaScript     - Programming languages
+React Router   - React Router is a routing library for React applications, enabling the definition of 
+                 multiple routes linked to views or components.
+Browser Router - Enables routing in application 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## React Compiler
-
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
