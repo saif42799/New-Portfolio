@@ -1,7 +1,7 @@
 
 function ProjectPage(){
     return(
-        <div>
+        <div id="ProjectPage">
             <h1>Project Page</h1>
             
         </div>
