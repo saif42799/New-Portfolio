@@ -34,7 +34,7 @@ function HomePage() {
                 </Link>
             </div>
 
-            <img className="head-img" src="./public/images/headImage.png" alt="head" />
+            <img className="head-img" src="/images/headImage.png" alt="head" />
 
             <div className="social-link-container">
                 <div className="resume-box">
