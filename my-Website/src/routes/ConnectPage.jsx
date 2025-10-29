@@ -2,7 +2,8 @@
 function ConnectPage(){
     return(
         <div>
-            <h1>Connect Page</h1>
+            <h1 className="page-title">CONNECT</h1>
+
             
         </div>
     )
