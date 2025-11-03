@@ -438,23 +438,39 @@ nav li {
   
 }
 
+
+@keyframes fade {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }   
+}
+
 #display-container-1{
   background-image: linear-gradient(to bottom right, #C58B00, #FFD300);
+  animation: fade 0.7s;
 }
 #display-container-2{
   background-image: linear-gradient(to bottom right, #9BC53D, #5A7D24);
+  animation: fade 0.7s;
 }
 #display-container-3{
   background-image: linear-gradient(to bottom right, #C19BF5, #8B5CF6);
+  animation: fade 0.7s;
 }
 #display-container-4{
   background-image: linear-gradient(to bottom right, #FF6B6B, #C44536);
+  animation: fade 0.7s;
 }
 #display-container-5{
   background-image: linear-gradient(to bottom right, #5BC0EB, #007BFF);
+  animation: fade 0.7s;
 }
 #display-container-6{
   background-image: linear-gradient(to bottom, #ea3900, #ed5300, #ef6800, #f17b08, #f28c17);
+  animation: fade 0.7s;
 }
 
 
@@ -490,10 +506,9 @@ nav li {
   position: absolute;
   right: 5px;
   top: 5px;
-  background-size: contain;
-  background-repeat: no-repeat;
+  background-size: cover;
   background-position: center;
-  
+  animation: fade 1s;
 }
 
 .btn-1{
@@ -523,17 +538,9 @@ nav li {
 }
 
 .img-fade{
-  animation: fade 1s;
+  animation: fade 0.7s;
 }
 
-@keyframes fade {
-  from {
-    opacity: 0.3;
-  }
-  to {
-    opacity: 1;
-  }   
-}
 
 /* .photoContainer{
   position: absolute;

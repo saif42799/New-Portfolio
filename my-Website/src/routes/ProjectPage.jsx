@@ -1,31 +1,14 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useTransition } from 'react';
 
 function ProjectPage() {
-    const [slideIndex, setSlideIndex] = useState(1);
-
-    // const handleThemeChange = (color) => {
-    //     document.documentElement.style.setProperty('--main-bg-color', color);
-    //     localStorage.setItem('theme', color);
-    // };
-
-
-    // useEffect(() => {
-    //     const savedTheme = localStorage.getItem('theme');
-    //     if (savedTheme) {
-    //         document.documentElement.style.setProperty('--main-bg-color', savedTheme);
-    //     }
-    // }, []);
-
-    // const handleThemeChange = (pageIndex) => {
-    //     document.documentElement.style.setProperty();
-    // };
-
+   
 
     const slides = [
-        { src: '/images/ED-screenshot-1.png', title: "image-1" },
-        { src: '/images/ED-screenshot-2.png', title: "image-1" },
-        { src: '/images/ED-screenshot-3.png', title: "image-1" },
-        { src: '/images/ED-screenshot-4.png', title: "image-1" }
+        { src: '/images/PhotoPort-img1.png', title: "image-1" },
+        { src: '/images/PhotoPort-img2.png', title: "image-1" },
+        { src: '/images/PhotoPort-img3.png', title: "image-1" },
+        { src: '/images/PhotoPort-img4.png', title: "image-1" },
+        { src: '/images/PhotoPort-img5.png', title: "image-1" }
     ];
 
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -34,16 +17,19 @@ function ProjectPage() {
         const isFirstSlide = currentIndex === 0;
         const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
         setCurrentIndex(newIndex);
+        
     };
 
     const goToNext = () => {
         const isLastSlide = currentIndex === slides.length - 1;
         const newIndex = isLastSlide ? 0 : currentIndex + 1;
         setCurrentIndex(newIndex);
+        
     };
 
 
     const [activeProject, setActiveProject] = useState(1);
+
 
 
     return (
@@ -129,15 +115,15 @@ function ProjectPage() {
                     </div>
                     <div className="box">
 
-                        <div className="display-image" style={{ backgroundImage: `url(${slides[currentIndex].src})` }}></div>
+                        <div className="display-image" style={{   backgroundImage: `url(${slides[currentIndex].src})` }}></div>
 
                     </div>
 
                     <div className="circle"></div>
 
                     <div className="project-des">
-                        <h1>PROJECT 1</h1>
-                        <p>I love creating cool things, solving problems, and building clean, intuitive interfaces that just feel right.</p>
+                        <h1>CLIENT WORK</h1>
+                        <p>A sleek, modern photography portfolio created for a client to showcase their stunning work.</p>
 
                         <div className="ex-links">
                             <a href="https://7b6a2249.emadswebsite.pages.dev/" target="blank"><img className="p-link" style={{ height: "20px" }} src="/images/external-link.png"></img></a>
