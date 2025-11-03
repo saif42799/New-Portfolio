@@ -1,10 +1,49 @@
+import { useEffect, useState } from 'react';
 
 function ProjectPage() {
+    const [slideIndex, setSlideIndex] = useState(1);
 
-    const handleThemeChange = (color) => {
-        document.documentElement.style.setProperty('--main-bg-color', color);
-        localStorage.setItem('theme', gradient);
+    // const handleThemeChange = (color) => {
+    //     document.documentElement.style.setProperty('--main-bg-color', color);
+    //     localStorage.setItem('theme', color);
+    // };
+
+
+    // useEffect(() => {
+    //     const savedTheme = localStorage.getItem('theme');
+    //     if (savedTheme) {
+    //         document.documentElement.style.setProperty('--main-bg-color', savedTheme);
+    //     }
+    // }, []);
+
+    // const handleThemeChange = (pageIndex) => {
+    //     document.documentElement.style.setProperty();
+    // };
+
+
+    const slides = [
+        { src: '/images/ED-screenshot-1.png', title: "image-1" },
+        { src: '/images/ED-screenshot-2.png', title: "image-1" },
+        { src: '/images/ED-screenshot-3.png', title: "image-1" },
+        { src: '/images/ED-screenshot-4.png', title: "image-1" }
+    ];
+
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    const goToPrevious = () => {
+        const isFirstSlide = currentIndex === 0;
+        const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
+        setCurrentIndex(newIndex);
     };
+
+    const goToNext = () => {
+        const isLastSlide = currentIndex === slides.length - 1;
+        const newIndex = isLastSlide ? 0 : currentIndex + 1;
+        setCurrentIndex(newIndex);
+    };
+
+
+    const [activeProject, setActiveProject] = useState(1);
 
 
     return (
@@ -16,7 +55,7 @@ function ProjectPage() {
 
                     <div className="project-holder">
                         <button className="theme-button" onClick={() =>
-                            handleThemeChange('linear-gradient(to bottom, #ea3900, #ed5300, #ef6800, #f17b08, #f28c17)')
+                            setActiveProject(1)
                         }>
                             <div className="half-circle-1"></div>
                             <h1>PHOTOGRAPHY <br></br> PORTFOLIO</h1>
@@ -25,7 +64,7 @@ function ProjectPage() {
 
                     <div className="project-holder">
                         <button className="theme-button" onClick={() =>
-                            handleThemeChange('linear-gradient(to bottom right, #FDE74C, #F9A602)')
+                            setActiveProject(2)
                         }>
                             <div className="half-circle-3"></div>
                             <div className="inner-circle-1"></div>
@@ -35,7 +74,7 @@ function ProjectPage() {
 
                     <div className="project-holder">
                         <button className="theme-button" onClick={() =>
-                            handleThemeChange('linear-gradient(to bottom right, #9BC53D, #5A7D24)')
+                            setActiveProject(3)
                         }>
                             <div className="half-circle-1"></div>
                             <div className="inner-circle-2"></div>
@@ -47,7 +86,7 @@ function ProjectPage() {
                 <div className="contained-project">
                     <div className="project-holder">
                         <button className="theme-button" onClick={() =>
-                            handleThemeChange('linear-gradient(to bottom right, #C19BF5, #8B5CF6)')
+                            setActiveProject(4)
                         }>
                             <div className="half-circle-2"></div>
                             <h1>PROJECT 4</h1>
@@ -56,7 +95,7 @@ function ProjectPage() {
 
                     <div className="project-holder">
                         <button className="theme-button" onClick={() =>
-                            handleThemeChange('linear-gradient(to bottom right, #FF6B6B, #C44536)')
+                            setActiveProject(5)
                         }>
                             <div className="half-circle-4"></div>
                             <div className="inner-circle-3"></div>
@@ -66,7 +105,7 @@ function ProjectPage() {
 
                     <div className="project-holder">
                         <button className="theme-button" onClick={() =>
-                            handleThemeChange('linear-gradient(to bottom right, #EA3900, #F28C17)')
+                            setActiveProject(6)
                         }>
                             <div className="half-circle-2"></div>
                             <div className="inner-circle-4"></div>
@@ -78,14 +117,321 @@ function ProjectPage() {
 
             </div>
 
-            <div className="single-project-container">
-                <div className="box">
-                    <img className="display-image" src="/images/idea 5.png"></img>
+
+
+            {activeProject === 1 && (
+
+                <div className="single-project-container" id='display-container-1'>
+
+                    <div className="btns">
+                        <span className="btn-1" onClick={goToPrevious}>&#10094;</span>
+                        <span className="btn-2" onClick={goToNext}>&#10095;</span>
+                    </div>
+                    <div className="box">
+
+                        <div className="display-image" style={{ backgroundImage: `url(${slides[currentIndex].src})` }}></div>
+
+                    </div>
+
+                    <div className="circle"></div>
+
+                    <div className="project-des">
+                        <h1>PROJECT 1</h1>
+                        <p>I love creating cool things, solving problems, and building clean, intuitive interfaces that just feel right.</p>
+
+                        <div className="ex-links">
+                            <a href="https://7b6a2249.emadswebsite.pages.dev/" target="blank"><img className="p-link" style={{ height: "20px" }} src="/images/external-link.png"></img></a>
+
+                            <a href="https://github.com/saif42799/EmadsWebsite" target="blank"><img className="p-link" src="/images/github.png"></img></a>
+
+                        </div>
+
+                    </div>
+
+                    <div className="tech-des">
+                        <h1>TECH USED</h1>
+
+                        <div className="tech-icons">
+                            <img className="pg-icons" src="/images/html.png"></img>
+                            <img className="pg-icons" src="/images/css-3(1).png"></img>
+                            <img className="pg-icons" src="/images/java-script.png"></img>
+                            <img className="pg-icons" src="/images/physics.png"></img>
+                            <img className="pg-icons" src="/images/cloudflare.png"></img>
+                        </div>
+
+                    </div>
+
                 </div>
-                <div className="circle"></div>
-            </div>
+
+            )}
+
+
+
+
+
+            {activeProject === 2 && (
+                <div className="single-project-container" id='display-container-2'>
+
+                    <div className="btns">
+                        <span className="btn-1" onClick={goToPrevious}>&#10094;</span>
+                        <span className="btn-2" onClick={goToNext}>&#10095;</span>
+                    </div>
+                    <div className="box">
+
+                        <div className="display-image" style={{ backgroundImage: `url(${slides[currentIndex].src})` }}></div>
+
+                    </div>
+
+                    <div className="circle"></div>
+
+                    <div className="project-des">
+                        <h1>PROJECT 2</h1>
+                        <p>I love creating cool things, solving problems, and building clean, intuitive interfaces that just feel right.</p>
+
+                        <div className="ex-links">
+                            <a href="https://7b6a2249.emadswebsite.pages.dev/" target="blank"><img className="p-link" style={{ height: "20px" }} src="/images/external-link.png"></img></a>
+
+                            <a href="https://github.com/saif42799/EmadsWebsite" target="blank"><img className="p-link" src="/images/github.png"></img></a>
+
+                        </div>
+
+                    </div>
+
+                    <div className="tech-des">
+                        <h1>TECH USED</h1>
+
+                        <div className="tech-icons">
+                            <img className="pg-icons" src="/images/html.png"></img>
+                            <img className="pg-icons" src="/images/css-3(1).png"></img>
+                            <img className="pg-icons" src="/images/java-script.png"></img>
+                            <img className="pg-icons" src="/images/physics.png"></img>
+                            <img className="pg-icons" src="/images/cloudflare.png"></img>
+                        </div>
+
+                    </div>
+
+                </div>
+            )}
+
+
+
+
+
+
+
+            {activeProject === 3 && (
+
+                <div className="single-project-container" id='display-container-3'>
+
+                    <div className="btns">
+                        <span className="btn-1" onClick={goToPrevious}>&#10094;</span>
+                        <span className="btn-2" onClick={goToNext}>&#10095;</span>
+                    </div>
+                    <div className="box">
+
+                        <div className="display-image" style={{ backgroundImage: `url(${slides[currentIndex].src})` }}></div>
+
+                    </div>
+
+                    <div className="circle"></div>
+
+                    <div className="project-des">
+                        <h1>PROJECT 3</h1>
+                        <p>I love creating cool things, solving problems, and building clean, intuitive interfaces that just feel right.</p>
+
+                        <div className="ex-links">
+                            <a href="https://7b6a2249.emadswebsite.pages.dev/" target="blank"><img className="p-link" style={{ height: "20px" }} src="/images/external-link.png"></img></a>
+
+                            <a href="https://github.com/saif42799/EmadsWebsite" target="blank"><img className="p-link" src="/images/github.png"></img></a>
+
+                        </div>
+
+                    </div>
+
+                    <div className="tech-des">
+                        <h1>TECH USED</h1>
+
+                        <div className="tech-icons">
+                            <img className="pg-icons" src="/images/html.png"></img>
+                            <img className="pg-icons" src="/images/css-3(1).png"></img>
+                            <img className="pg-icons" src="/images/java-script.png"></img>
+                            <img className="pg-icons" src="/images/physics.png"></img>
+                            <img className="pg-icons" src="/images/cloudflare.png"></img>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            )}
+
+
+
+
+
+
+
+
+
+
+            {activeProject === 4 && (
+
+                <div className="single-project-container" id='display-container-4'>
+
+                    <div className="btns">
+                        <span className="btn-1" onClick={goToPrevious}>&#10094;</span>
+                        <span className="btn-2" onClick={goToNext}>&#10095;</span>
+                    </div>
+                    <div className="box">
+
+                        <div className="display-image" style={{ backgroundImage: `url(${slides[currentIndex].src})` }}></div>
+
+                    </div>
+
+                    <div className="circle"></div>
+
+                    <div className="project-des">
+                        <h1>PROJECT 4</h1>
+                        <p>I love creating cool things, solving problems, and building clean, intuitive interfaces that just feel right.</p>
+
+                        <div className="ex-links">
+                            <a href="https://7b6a2249.emadswebsite.pages.dev/" target="blank"><img className="p-link" style={{ height: "20px" }} src="/images/external-link.png"></img></a>
+
+                            <a href="https://github.com/saif42799/EmadsWebsite" target="blank"><img className="p-link" src="/images/github.png"></img></a>
+
+                        </div>
+
+                    </div>
+
+                    <div className="tech-des">
+                        <h1>TECH USED</h1>
+
+                        <div className="tech-icons">
+                            <img className="pg-icons" src="/images/html.png"></img>
+                            <img className="pg-icons" src="/images/css-3(1).png"></img>
+                            <img className="pg-icons" src="/images/java-script.png"></img>
+                            <img className="pg-icons" src="/images/physics.png"></img>
+                            <img className="pg-icons" src="/images/cloudflare.png"></img>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            )}
+
+
+
+
+
+
+            {activeProject === 5 && (
+
+                <div className="single-project-container" id='display-container-5'>
+
+                    <div className="btns">
+                        <span className="btn-1" onClick={goToPrevious}>&#10094;</span>
+                        <span className="btn-2" onClick={goToNext}>&#10095;</span>
+                    </div>
+                    <div className="box">
+
+                        <div className="display-image" style={{ backgroundImage: `url(${slides[currentIndex].src})` }}></div>
+
+                    </div>
+
+                    <div className="circle"></div>
+
+                    <div className="project-des">
+                        <h1>PROJECT 5</h1>
+                        <p>I love creating cool things, solving problems, and building clean, intuitive interfaces that just feel right.</p>
+
+                        <div className="ex-links">
+                            <a href="https://7b6a2249.emadswebsite.pages.dev/" target="blank"><img className="p-link" style={{ height: "20px" }} src="/images/external-link.png"></img></a>
+
+                            <a href="https://github.com/saif42799/EmadsWebsite" target="blank"><img className="p-link" src="/images/github.png"></img></a>
+
+                        </div>
+
+                    </div>
+
+                    <div className="tech-des">
+                        <h1>TECH USED</h1>
+
+                        <div className="tech-icons">
+                            <img className="pg-icons" src="/images/html.png"></img>
+                            <img className="pg-icons" src="/images/css-3(1).png"></img>
+                            <img className="pg-icons" src="/images/java-script.png"></img>
+                            <img className="pg-icons" src="/images/physics.png"></img>
+                            <img className="pg-icons" src="/images/cloudflare.png"></img>
+                        </div>
+
+                    </div>
+
+                </div>
+            )}
+
+
+
+
+
+
+
+            {activeProject === 6 && (
+                <div className="single-project-container" id='display-container-6'>
+
+                    <div className="btns">
+                        <span className="btn-1" onClick={goToPrevious}>&#10094;</span>
+                        <span className="btn-2" onClick={goToNext}>&#10095;</span>
+                    </div>
+                    <div className="box">
+
+                        <div className="display-image" style={{ backgroundImage: `url(${slides[currentIndex].src})` }}></div>
+
+                    </div>
+
+                    <div className="circle"></div>
+
+                    <div className="project-des">
+                        <h1>PROJECT 6</h1>
+                        <p>I love creating cool things, solving problems, and building clean, intuitive interfaces that just feel right.</p>
+
+                        <div className="ex-links">
+                            <a href="https://7b6a2249.emadswebsite.pages.dev/" target="blank"><img className="p-link" style={{ height: "20px" }} src="/images/external-link.png"></img></a>
+
+                            <a href="https://github.com/saif42799/EmadsWebsite" target="blank"><img className="p-link" src="/images/github.png"></img></a>
+
+                        </div>
+
+                    </div>
+
+                    <div className="tech-des">
+                        <h1>TECH USED</h1>
+
+                        <div className="tech-icons">
+                            <img className="pg-icons" src="/images/html.png"></img>
+                            <img className="pg-icons" src="/images/css-3(1).png"></img>
+                            <img className="pg-icons" src="/images/java-script.png"></img>
+                            <img className="pg-icons" src="/images/physics.png"></img>
+                            <img className="pg-icons" src="/images/cloudflare.png"></img>
+                        </div>
+
+                    </div>
+
+                </div>
+            )}
+
+
+
+
+
+
+
+
+
         </div>
     )
 }
 
 export default ProjectPage;
+
+
