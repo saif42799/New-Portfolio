@@ -5,10 +5,10 @@ function ProjectPage() {
 
     const slides = [
         { src: '/images/PhotoPort-img1.png', title: "image-1" },
-        { src: '/images/PhotoPort-img2.png', title: "image-1" },
-        { src: '/images/PhotoPort-img3.png', title: "image-1" },
-        { src: '/images/PhotoPort-img4.png', title: "image-1" },
-        { src: '/images/PhotoPort-img5.png', title: "image-1" }
+        { src: '/images/PhotoPort-img2.png', title: "image-2" },
+        { src: '/images/PhotoPort-img3.png', title: "image-3" },
+        { src: '/images/PhotoPort-img4.png', title: "image-4" },
+        { src: '/images/PhotoPort-img5.png', title: "image-5" }
     ];
 
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -28,7 +28,21 @@ function ProjectPage() {
     };
 
 
+
+
+
+
+
+
+
+
     const [activeProject, setActiveProject] = useState(1);
+
+
+
+
+
+
 
 
 
@@ -105,6 +119,21 @@ function ProjectPage() {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             {activeProject === 1 && (
 
                 <div className="single-project-container" id='display-container-1'>
@@ -119,7 +148,9 @@ function ProjectPage() {
 
                     </div>
 
+                    <div className="circle-ani" id="ran-ani-1"></div>
                     <div className="circle"></div>
+                    
 
                     <div className="project-des">
                         <h1>CLIENT WORK</h1>
@@ -155,6 +186,20 @@ function ProjectPage() {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             {activeProject === 2 && (
                 <div className="single-project-container" id='display-container-2'>
 
@@ -168,11 +213,12 @@ function ProjectPage() {
 
                     </div>
 
+                    <div className="circle-ani" id="ran-ani-2"></div>
                     <div className="circle"></div>
 
                     <div className="project-des">
-                        <h1>PROJECT 2</h1>
-                        <p>I love creating cool things, solving problems, and building clean, intuitive interfaces that just feel right.</p>
+                        <h1>JOB TRACKER</h1>
+                        <p>Coming soon</p>
 
                         <div className="ex-links">
                             <a href="https://7b6a2249.emadswebsite.pages.dev/" target="blank"><img className="p-link" style={{ height: "20px" }} src="/images/external-link.png"></img></a>
@@ -198,6 +244,21 @@ function ProjectPage() {
 
                 </div>
             )}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -219,11 +280,12 @@ function ProjectPage() {
 
                     </div>
 
+                    <div className="circle-ani" id="ran-ani-3"></div>
                     <div className="circle"></div>
 
                     <div className="project-des">
-                        <h1>PROJECT 3</h1>
-                        <p>I love creating cool things, solving problems, and building clean, intuitive interfaces that just feel right.</p>
+                        <h1>JDM STORE</h1>
+                        <p>Coming soon</p>
 
                         <div className="ex-links">
                             <a href="https://7b6a2249.emadswebsite.pages.dev/" target="blank"><img className="p-link" style={{ height: "20px" }} src="/images/external-link.png"></img></a>
@@ -250,6 +312,22 @@ function ProjectPage() {
                 </div>
 
             )}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -274,11 +352,12 @@ function ProjectPage() {
 
                     </div>
 
+                    <div className="circle-ani" id="ran-ani-4"></div>
                     <div className="circle"></div>
 
                     <div className="project-des">
-                        <h1>PROJECT 4</h1>
-                        <p>I love creating cool things, solving problems, and building clean, intuitive interfaces that just feel right.</p>
+                        <h1>FASHION WEBSITE</h1>
+                        <p>Coming soon</p>
 
                         <div className="ex-links">
                             <a href="https://7b6a2249.emadswebsite.pages.dev/" target="blank"><img className="p-link" style={{ height: "20px" }} src="/images/external-link.png"></img></a>
@@ -305,6 +384,27 @@ function ProjectPage() {
                 </div>
 
             )}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -325,11 +425,12 @@ function ProjectPage() {
 
                     </div>
 
+                    <div className="circle-ani" id="ran-ani-5"></div>
                     <div className="circle"></div>
 
                     <div className="project-des">
                         <h1>PROJECT 5</h1>
-                        <p>I love creating cool things, solving problems, and building clean, intuitive interfaces that just feel right.</p>
+                        <p>Coming soon</p>
 
                         <div className="ex-links">
                             <a href="https://7b6a2249.emadswebsite.pages.dev/" target="blank"><img className="p-link" style={{ height: "20px" }} src="/images/external-link.png"></img></a>
@@ -362,6 +463,26 @@ function ProjectPage() {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             {activeProject === 6 && (
                 <div className="single-project-container" id='display-container-6'>
 
@@ -375,11 +496,12 @@ function ProjectPage() {
 
                     </div>
 
+                    <div className="circle-ani" id="ran-ani-6"></div>
                     <div className="circle"></div>
 
                     <div className="project-des">
                         <h1>PROJECT 6</h1>
-                        <p>I love creating cool things, solving problems, and building clean, intuitive interfaces that just feel right.</p>
+                        <p>Coming soon</p>
 
                         <div className="ex-links">
                             <a href="https://7b6a2249.emadswebsite.pages.dev/" target="blank"><img className="p-link" style={{ height: "20px" }} src="/images/external-link.png"></img></a>
