@@ -1,15 +1,38 @@
-import { useEffect, useState, useTransition } from 'react';
+import { useEffect, useState } from 'react';
 
 function ProjectPage() {
    
 
-    const slides = [
-        { src: '/images/PhotoPort-img1.png', title: "image-1" },
-        { src: '/images/PhotoPort-img2.png', title: "image-2" },
-        { src: '/images/PhotoPort-img3.png', title: "image-3" },
-        { src: '/images/PhotoPort-img4.png', title: "image-4" },
-        { src: '/images/PhotoPort-img5.png', title: "image-5" }
-    ];
+    const projectSlides = {
+        1:[
+            { src: '/images/project-1-screenshot-7.png', title: "image-1" },
+            { src: '/images/project-1-screenshot-1.png', title: "image-2" },
+            { src: '/images/project-1-screenshot-2.png', title: "image-3" },
+            { src: '/images/project-1-screenshot-3.png', title: "image-4" },
+            { src: '/images/project-1-screenshot-4.png', title: "image-5" },
+            { src: '/images/project-1-screenshot-5.png', title: "image-6" },
+            { src: '/images/project-1-screenshot-6.png', title: "image-7" }
+        ], 
+        2:[
+            { src: 'https://i.gifer.com/2hk9.gif', title: "image-1" }
+        ], 
+        3:[
+            { src: 'https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZHo2Y3hodWI4dXBtbzAwOHV1dHMyc3JyaHE2dXF1YTcyOXRoeGl3dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/9K6CebIaqQmAMxJcJQ/giphy.gif', title: "image-1" }
+        ], 
+        4:[
+            { src: 'https://i.gifer.com/Y3in.gif', title: "image-1" }
+        ], 
+        5:[
+            { src: 'https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3aHYwYTc4Njk0MjRldWtqaGI3ZHF5YmJlcjZoYzk1OTYwOG9nZG1ieiZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/xRxLI1qWApeIlzkS9R/giphy.gif', title: "image-1" }
+        ], 
+        6:[
+            { src: 'https://i.gifer.com/ZiaV.gif', title: "image-1" }
+        ]
+    };
+
+    const [activeProject, setActiveProject] = useState(1);
+
+    const slides = projectSlides[activeProject] || [];
 
     const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -17,32 +40,13 @@ function ProjectPage() {
         const isFirstSlide = currentIndex === 0;
         const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
         setCurrentIndex(newIndex);
-        
     };
 
     const goToNext = () => {
         const isLastSlide = currentIndex === slides.length - 1;
         const newIndex = isLastSlide ? 0 : currentIndex + 1;
         setCurrentIndex(newIndex);
-        
     };
-
-
-
-
-
-
-
-
-
-
-    const [activeProject, setActiveProject] = useState(1);
-
-
-
-
-
-
 
 
 
@@ -144,7 +148,8 @@ function ProjectPage() {
                     </div>
                     <div className="box">
 
-                        <div className="display-image" style={{   backgroundImage: `url(${slides[currentIndex].src})` }}></div>
+                        <div className="display-image" style={{   
+                            backgroundImage: `url(${slides[currentIndex]?.src})`, loading: 'lazy' }}></div>
 
                     </div>
 
@@ -209,7 +214,7 @@ function ProjectPage() {
                     </div>
                     <div className="box">
 
-                        <div className="display-image" style={{ backgroundImage: `url(${slides[currentIndex].src})` }}></div>
+                        <div className="display-image" style={{ backgroundImage: `url(${slides[currentIndex]?.src})` }}></div>
 
                     </div>
 
@@ -221,9 +226,9 @@ function ProjectPage() {
                         <p>Coming soon</p>
 
                         <div className="ex-links">
-                            <a href="https://7b6a2249.emadswebsite.pages.dev/" target="blank"><img className="p-link" style={{ height: "20px" }} src="/images/external-link.png"></img></a>
+                            <a href="" target="blank"><img className="p-link" style={{ height: "20px" }} src="/images/external-link.png"></img></a>
 
-                            <a href="https://github.com/saif42799/EmadsWebsite" target="blank"><img className="p-link" src="/images/github.png"></img></a>
+                            <a href="" target="blank"><img className="p-link" src="/images/github.png"></img></a>
 
                         </div>
 
@@ -276,7 +281,7 @@ function ProjectPage() {
                     </div>
                     <div className="box">
 
-                        <div className="display-image" style={{ backgroundImage: `url(${slides[currentIndex].src})` }}></div>
+                        <div className="display-image" style={{ backgroundImage: `url(${slides[currentIndex]?.src})` }}></div>
 
                     </div>
 
@@ -288,9 +293,9 @@ function ProjectPage() {
                         <p>Coming soon</p>
 
                         <div className="ex-links">
-                            <a href="https://7b6a2249.emadswebsite.pages.dev/" target="blank"><img className="p-link" style={{ height: "20px" }} src="/images/external-link.png"></img></a>
+                            <a href="" target="blank"><img className="p-link" style={{ height: "20px" }} src="/images/external-link.png"></img></a>
 
-                            <a href="https://github.com/saif42799/EmadsWebsite" target="blank"><img className="p-link" src="/images/github.png"></img></a>
+                            <a href="" target="blank"><img className="p-link" src="/images/github.png"></img></a>
 
                         </div>
 
@@ -348,7 +353,7 @@ function ProjectPage() {
                     </div>
                     <div className="box">
 
-                        <div className="display-image" style={{ backgroundImage: `url(${slides[currentIndex].src})` }}></div>
+                        <div className="display-image" style={{ backgroundImage: `url(${slides[currentIndex]?.src})` }}></div>
 
                     </div>
 
@@ -360,9 +365,9 @@ function ProjectPage() {
                         <p>Coming soon</p>
 
                         <div className="ex-links">
-                            <a href="https://7b6a2249.emadswebsite.pages.dev/" target="blank"><img className="p-link" style={{ height: "20px" }} src="/images/external-link.png"></img></a>
+                            <a href="" target="blank"><img className="p-link" style={{ height: "20px" }} src="/images/external-link.png"></img></a>
 
-                            <a href="https://github.com/saif42799/EmadsWebsite" target="blank"><img className="p-link" src="/images/github.png"></img></a>
+                            <a href="" target="blank"><img className="p-link" src="/images/github.png"></img></a>
 
                         </div>
 
@@ -421,7 +426,7 @@ function ProjectPage() {
                     </div>
                     <div className="box">
 
-                        <div className="display-image" style={{ backgroundImage: `url(${slides[currentIndex].src})` }}></div>
+                        <div className="display-image" style={{ backgroundImage: `url(${slides[currentIndex]?.src})` }}></div>
 
                     </div>
 
@@ -433,9 +438,9 @@ function ProjectPage() {
                         <p>Coming soon</p>
 
                         <div className="ex-links">
-                            <a href="https://7b6a2249.emadswebsite.pages.dev/" target="blank"><img className="p-link" style={{ height: "20px" }} src="/images/external-link.png"></img></a>
+                            <a href="" target="blank"><img className="p-link" style={{ height: "20px" }} src="/images/external-link.png"></img></a>
 
-                            <a href="https://github.com/saif42799/EmadsWebsite" target="blank"><img className="p-link" src="/images/github.png"></img></a>
+                            <a href="" target="blank"><img className="p-link" src="/images/github.png"></img></a>
 
                         </div>
 
@@ -492,7 +497,7 @@ function ProjectPage() {
                     </div>
                     <div className="box">
 
-                        <div className="display-image" style={{ backgroundImage: `url(${slides[currentIndex].src})` }}></div>
+                        <div className="display-image" style={{ backgroundImage: `url(${slides[currentIndex]?.src})` }}></div>
 
                     </div>
 
@@ -504,9 +509,9 @@ function ProjectPage() {
                         <p>Coming soon</p>
 
                         <div className="ex-links">
-                            <a href="https://7b6a2249.emadswebsite.pages.dev/" target="blank"><img className="p-link" style={{ height: "20px" }} src="/images/external-link.png"></img></a>
+                            <a href="" target="blank"><img className="p-link" style={{ height: "20px" }} src="/images/external-link.png"></img></a>
 
-                            <a href="https://github.com/saif42799/EmadsWebsite" target="blank"><img className="p-link" src="/images/github.png"></img></a>
+                            <a href="" target="blank"><img className="p-link" src="/images/github.png"></img></a>
 
                         </div>
 
