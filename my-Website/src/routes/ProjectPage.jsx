@@ -5,13 +5,13 @@ function ProjectPage() {
 
     const projectSlides = {
         1:[
-            { src: '/images/project-1-screenshot-7.png', title: "image-1" },
-            { src: '/images/project-1-screenshot-1.png', title: "image-2" },
-            { src: '/images/project-1-screenshot-2.png', title: "image-3" },
-            { src: '/images/project-1-screenshot-3.png', title: "image-4" },
-            { src: '/images/project-1-screenshot-4.png', title: "image-5" },
-            { src: '/images/project-1-screenshot-5.png', title: "image-6" },
-            { src: '/images/project-1-screenshot-6.png', title: "image-7" }
+            { src: '/images/project-1-screenshot-7.webp', title: "image-1" },
+            { src: '/images/project-1-screenshot-1.webp', title: "image-2" },
+            { src: '/images/project-1-screenshot-2.webp', title: "image-3" },
+            { src: '/images/project-1-screenshot-3.webp', title: "image-4" },
+            { src: '/images/project-1-screenshot-4.webp', title: "image-5" },
+            { src: '/images/project-1-screenshot-5.webp', title: "image-6" },
+            { src: '/images/project-1-screenshot-6.webp', title: "image-7" }
         ], 
         2:[
             { src: 'https://i.gifer.com/2hk9.gif', title: "image-1" }
@@ -159,7 +159,7 @@ function ProjectPage() {
 
                     <div className="project-des">
                         <h1>CLIENT WORK</h1>
-                        <p>A sleek, modern photography portfolio created for a client to showcase their stunning work.</p>
+                        <p>A sleek, modern photography portfolio created for a client to showcase their stunning work. Check out the live website below!</p>
 
                         <div className="ex-links">
                             <a href="https://7b6a2249.emadswebsite.pages.dev/" target="blank"><img className="p-link" style={{ height: "20px" }} src="/images/external-link.png"></img></a>
