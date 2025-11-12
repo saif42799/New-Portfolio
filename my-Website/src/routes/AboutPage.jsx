@@ -24,6 +24,8 @@ function AboutPage() {
 
 
             <div className="skills-container">
+                <h2 className="hover"><img></img><span>&#8595;</span> HOVER</h2>
+
                 <h1>SKILLS</h1>
                 <div className="boxes">
                     <div className="skill-box">

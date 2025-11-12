@@ -238,11 +238,11 @@ function ProjectPage() {
                         <h1>TECH USED</h1>
 
                         <div className="tech-icons">
-                            <img className="pg-icons" src="/images/html.png"></img>
+                            {/* <img className="pg-icons" src="/images/html.png"></img>
                             <img className="pg-icons" src="/images/css-3(1).png"></img>
                             <img className="pg-icons" src="/images/java-script.png"></img>
                             <img className="pg-icons" src="/images/physics.png"></img>
-                            <img className="pg-icons" src="/images/cloudflare.png"></img>
+                            <img className="pg-icons" src="/images/cloudflare.png"></img> */}
                         </div>
 
                     </div>
@@ -305,11 +305,11 @@ function ProjectPage() {
                         <h1>TECH USED</h1>
 
                         <div className="tech-icons">
-                            <img className="pg-icons" src="/images/html.png"></img>
+                            {/* <img className="pg-icons" src="/images/html.png"></img>
                             <img className="pg-icons" src="/images/css-3(1).png"></img>
                             <img className="pg-icons" src="/images/java-script.png"></img>
                             <img className="pg-icons" src="/images/physics.png"></img>
-                            <img className="pg-icons" src="/images/cloudflare.png"></img>
+                            <img className="pg-icons" src="/images/cloudflare.png"></img> */}
                         </div>
 
                     </div>
@@ -377,11 +377,11 @@ function ProjectPage() {
                         <h1>TECH USED</h1>
 
                         <div className="tech-icons">
-                            <img className="pg-icons" src="/images/html.png"></img>
+                            {/* <img className="pg-icons" src="/images/html.png"></img>
                             <img className="pg-icons" src="/images/css-3(1).png"></img>
                             <img className="pg-icons" src="/images/java-script.png"></img>
                             <img className="pg-icons" src="/images/physics.png"></img>
-                            <img className="pg-icons" src="/images/cloudflare.png"></img>
+                            <img className="pg-icons" src="/images/cloudflare.png"></img> */}
                         </div>
 
                     </div>
@@ -450,11 +450,11 @@ function ProjectPage() {
                         <h1>TECH USED</h1>
 
                         <div className="tech-icons">
-                            <img className="pg-icons" src="/images/html.png"></img>
+                            {/* <img className="pg-icons" src="/images/html.png"></img>
                             <img className="pg-icons" src="/images/css-3(1).png"></img>
                             <img className="pg-icons" src="/images/java-script.png"></img>
                             <img className="pg-icons" src="/images/physics.png"></img>
-                            <img className="pg-icons" src="/images/cloudflare.png"></img>
+                            <img className="pg-icons" src="/images/cloudflare.png"></img> */}
                         </div>
 
                     </div>
@@ -521,11 +521,11 @@ function ProjectPage() {
                         <h1>TECH USED</h1>
 
                         <div className="tech-icons">
-                            <img className="pg-icons" src="/images/html.png"></img>
+                            {/* <img className="pg-icons" src="/images/html.png"></img>
                             <img className="pg-icons" src="/images/css-3(1).png"></img>
                             <img className="pg-icons" src="/images/java-script.png"></img>
                             <img className="pg-icons" src="/images/physics.png"></img>
-                            <img className="pg-icons" src="/images/cloudflare.png"></img>
+                            <img className="pg-icons" src="/images/cloudflare.png"></img> */}
                         </div>
 
                     </div>

@@ -57,6 +57,11 @@ body {
   }
 }
 
+#follow-mouse {
+  transition: transform 0.1s ease-out;
+  will-change: transform;
+}
+
 h1 {
   color: #D9D9D9;
 }
@@ -90,7 +95,6 @@ nav li {
   width: 8.5rem;
   transition: ease-in-out 0.5s;
 }
-
 
 .nav-element {
   color: #D9D9D9;
@@ -141,7 +145,7 @@ nav li {
   top: 65px;
   left: 50%;
   transform: translate(-50%, -50%);
-  animation: fade 3s;
+  animation: fade 0.7s;
 }
 
 .dot {
@@ -154,11 +158,12 @@ nav li {
   bottom: 270px;
   z-index: 9;
   width: 600px;
+  animation: fade-left 0.7s;
 }
 
 .name-container {
   display: flex;
-  animation: fade-left 3s;
+  animation: fade-left 0.7s;
 
 }
 
@@ -191,7 +196,7 @@ nav li {
   bottom: 10px;
   font-size: 18rem;
   z-index: -1;
-  animation: fade-left 2s;
+  animation: fade-left 0.7s;
 }
 
 .occupation-conatainer {
@@ -201,7 +206,7 @@ nav li {
   right: 230px;
   top: 200px;
   font-size: 0.9rem;
-  animation: fade-right 2s;
+  animation: fade-right 0.7s;
 }
 
 .ATL {
@@ -216,7 +221,7 @@ nav li {
   position: absolute;
   right: 180px;
   top: 270px;
-  animation: fade-right 2.8s;
+  animation: fade-right 0.7s;
 }
 
 .project-link {
@@ -227,7 +232,7 @@ nav li {
   right: 180px;
   bottom: 200px;
   z-index: 30;
-  animation: fade-right 2s;
+  animation: fade-right 0.7s;
 }
 
 .arrow-img {
@@ -252,7 +257,7 @@ nav li {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 10;
-  animation: fade 1s;
+  animation: fade 0.5s;
 }
 
 .social-link-container {
@@ -262,7 +267,7 @@ nav li {
   right: 175px;
   bottom: 55px;
   display: flex;
-  animation: fade-right 1s;
+  animation: fade-right 0.7s;
 }
 
 .social-link-container svg {
@@ -293,9 +298,9 @@ nav li {
   z-index: 5;
 }
 
-/* .resume-box p{
-  padding-top: 5px;
-} */
+.resume-box p {
+  padding-right: 10px;
+}
 
 .mail-box,
 .linkedin-box,
@@ -304,6 +309,7 @@ nav li {
   background-color: #1C4E4E;
   border-radius: 5px;
   height: 30px;
+  width: 100px;
   z-index: 10;
   transition: 0.5s ease-in-out;
 }
@@ -319,15 +325,33 @@ nav li {
 .linkedin-box svg,
 .github-box svg {
   padding: 5px;
-
 }
-
 
 .moble-menu-buttons {
   background-color: royalblue;
   position: absolute;
   display: flex;
   top: 50px;
+}
+
+.copy-message-2 {
+  font-family: Saira SemiCondensed-SemiBold;
+  position: absolute;
+  bottom: 35px;
+  right: 65px;
+  font-size: 14px;
+  color: #D12F2A;
+  opacity: 0;
+  z-index: 20;
+  animation: fadeInOut 1s ease forwards;
+}
+#contentToCopy-2{
+  opacity: 0;
+  padding: 0;
+}
+
+.copy-button-2:hover{
+  background-color: rgb(255, 0, 0);
 }
 
 #sidebar-active {
@@ -339,11 +363,6 @@ nav li {
   display: none;
 }
 
-
-
-
-
-
 .circle-img {
   height: 400px;
   position: absolute;
@@ -351,7 +370,7 @@ nav li {
   right: 160px;
   border-radius: 50%;
   z-index: 10;
-  animation: fade-right 2s;
+  animation: fade-right 1s;
 }
 
 .text-container {
@@ -360,7 +379,7 @@ nav li {
   width: 65rem;
   margin: 50px;
   display: flex;
-  animation: fade 3s;
+  animation: fade 1s;
 }
 
 .text-box {
@@ -391,11 +410,34 @@ nav li {
 }
 
 .skills-container {
-  /* background-color: royalblue; */
   margin: 50px;
   height: 7rem;
   width: 50rem;
-  animation: fade-left 3s;
+  animation: fade-left 1s;
+  position: relative;
+}
+
+.hover{
+  position: absolute;
+  font-family: Saira SemiCondensed-SemiBold;
+  color: #D9D9D9;
+  font-size: 15px;
+  left: 140px;
+  top: 7px;
+  animation: disapear 5s ease-in-out;
+  opacity: 0;
+}
+
+@keyframes disapear {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 .skills-container h1 {
@@ -476,7 +518,6 @@ nav li {
   width: 400px;
 }
 
-
 .multi-project-container {
   /* background-color: rgb(174, 255, 127); */
   height: 20rem;
@@ -535,10 +576,6 @@ nav li {
   border-radius: 40px;
   right: 30px;
   top: 30px;
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center; */
 }
 
 .display-image {
@@ -555,7 +592,6 @@ nav li {
 }
 
 .btn-1 {
-  /* z-index: 10; */
   font-size: 1.5rem;
   color: #07141A;
   position: absolute;
@@ -566,7 +602,6 @@ nav li {
 }
 
 .btn-2 {
-  /* z-index: 10; */
   font-size: 1.5rem;
   color: #07141A;
   position: absolute;
@@ -584,14 +619,6 @@ nav li {
 .img-fade {
   animation: fade 0.7s;
 }
-
-
-/* .photoContainer{
-  position: absolute;
-  display: flex;
-  
-} */
-
 
 .project-des {
   margin: 30px;
@@ -818,7 +845,6 @@ nav li {
   transition: 0.5s ease-in-out;
 }
 
-
 .project-holder:hover .half-circle-1,
 .project-holder:hover .half-circle-2,
 .project-holder:hover .half-circle-3,
@@ -834,12 +860,6 @@ nav li {
   cursor: pointer;
 }
 
-
-
-
-
-
-
 .overlay-container {
   position: relative;
   height: 20rem;
@@ -853,8 +873,6 @@ nav li {
   transition: 0.7s ease-in-out;
 }
 
-
-
 .overlay-1 {
   height: 15rem;
   width: 35rem;
@@ -865,14 +883,9 @@ nav li {
   border-width: 0.9px;
   position: absolute;
   top: 15%;
-
   overflow: hidden;
   transform: translate(60px, -60px);
 }
-
-
-
-
 
 .overlay-2 {
   height: 15rem;
@@ -888,11 +901,6 @@ nav li {
   transform: translate(30px, -30px);
 }
 
-
-
-
-
-
 .oval-overlay {
   height: 15rem;
   width: 90px;
@@ -902,11 +910,6 @@ nav li {
   top: 50px;
   z-index: -10;
 }
-
-
-
-
-
 
 .overlay-3 {
   height: 15rem;
@@ -919,11 +922,6 @@ nav li {
   position: absolute;
   top: 15%;
 }
-
-
-
-
-
 
 .circle-overlay {
   position: absolute;
@@ -980,10 +978,6 @@ nav li {
   top: 50px;
 }
 
-
-
-
-
 .overlay-4 {
   height: 15rem;
   width: 35rem;
@@ -1002,8 +996,6 @@ nav li {
 .overlay-4:hover .overlay-3 {
   opacity: 0;
 }
-
-
 
 .link-overlay,
 .email-overlay {
@@ -1032,7 +1024,6 @@ nav li {
   height: 18px;
   transition: 0.2s ease-in-out;
 }
-
 
 .link-overlay a:hover {
   background-color: rgba(61, 61, 61, 0.5);
