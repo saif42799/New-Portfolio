@@ -275,6 +275,10 @@ nav li {
   padding-left: 5px;
 }
 
+.social-link-container a {
+  text-decoration: none;
+}
+
 .resume-box {
   font-family: Saira SemiCondensed-SemiBold;
   color: #D9D9D9;
