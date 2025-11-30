@@ -5,16 +5,18 @@ function ProjectPage() {
 
     const projectSlides = {
         1:[
-            { src: '/images/project-1-screenshot-7.webp', title: "image-1" },
             { src: '/images/project-1-screenshot-1.webp', title: "image-2" },
             { src: '/images/project-1-screenshot-2.webp', title: "image-3" },
             { src: '/images/project-1-screenshot-3.webp', title: "image-4" },
-            { src: '/images/project-1-screenshot-4.webp', title: "image-5" },
             { src: '/images/project-1-screenshot-5.webp', title: "image-6" },
             { src: '/images/project-1-screenshot-6.webp', title: "image-7" }
         ], 
         2:[
-            { src: 'https://i.gifer.com/2hk9.gif', title: "image-1" }
+            { src: '/images/project-2-screenshot-1.webp', title: "image-1" },
+            { src: '/images/project-2-screenshot-2.webp', title: "image-2" },
+            { src: '/images/project-2-screenshot-3.webp', title: "image-3" },
+            { src: '/images/project-2-screenshot-4.webp', title: "image-4" },
+            { src: '/images/project-2-screenshot-5.webp', title: "image-5" }
         ], 
         3:[
             { src: 'https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZHo2Y3hodWI4dXBtbzAwOHV1dHMyc3JyaHE2dXF1YTcyOXRoeGl3dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/9K6CebIaqQmAMxJcJQ/giphy.gif', title: "image-1" }
@@ -72,7 +74,7 @@ function ProjectPage() {
                         }>
                             <div className="half-circle-3"></div>
                             <div className="inner-circle-1"></div>
-                            <h1>PROJECT 2</h1>
+                            <h1>FASHION WEBSITE</h1>
                         </button>
                     </div>
 
@@ -218,17 +220,20 @@ function ProjectPage() {
 
                     </div>
 
-                    <div className="circle-ani" id="ran-ani-2"></div>
+                    <div className="circle-ani" id="ran-ani-4"></div>
                     <div className="circle"></div>
 
                     <div className="project-des">
-                        <h1>JOB TRACKER</h1>
-                        <p>Coming soon</p>
+                        <h1>EVOQUER</h1>
+                        <p>EVOQUER is a luxury fashion website concept designed in Figma with a focus on clean layouts and 
+                            a premium visual style. I used AI tools such as ChatGPT, Lovart.ai, and Nano Banna for branding, 
+                            content, and design concepts. The main landing page is currently being developed and will launch 
+                            on Webflow as a “Coming Soon” experience.</p>
 
                         <div className="ex-links">
-                            <a href="" target="blank"><img className="p-link" style={{ height: "20px" }} src="/images/external-link.png"></img></a>
+                            {/* <a href="" target="blank"><img className="p-link" style={{ height: "20px" }} src="/images/external-link.png"></img></a> */}
 
-                            <a href="" target="blank"><img className="p-link" src="/images/github.png"></img></a>
+                            <a href="https://www.figma.com/proto/jMYPSZ4KiwNB9kju9rF8rN/Fashion-Website?node-id=19-5&t=myxJfutqZChqGMG9-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1" target="blank"><img className="p-link" src="/images/figma.png"></img></a>
 
                         </div>
 
@@ -238,11 +243,10 @@ function ProjectPage() {
                         <h1>TECH USED</h1>
 
                         <div className="tech-icons">
-                            {/* <img className="pg-icons" src="/images/html.png"></img>
-                            <img className="pg-icons" src="/images/css-3(1).png"></img>
-                            <img className="pg-icons" src="/images/java-script.png"></img>
-                            <img className="pg-icons" src="/images/physics.png"></img>
-                            <img className="pg-icons" src="/images/cloudflare.png"></img> */}
+                            <img className="pg-icons" src="/images/figma.png"></img>
+                            <img className="pg-icons" src="/images/nano.png"></img>
+                            <img className="pg-icons" src="/images/chatgpt.png"></img>
+                            <img className="pg-icons" src="/images/webflow.png"></img>
                         </div>
 
                     </div>
@@ -357,11 +361,11 @@ function ProjectPage() {
 
                     </div>
 
-                    <div className="circle-ani" id="ran-ani-4"></div>
+                    <div className="circle-ani" id="ran-ani-2"></div>
                     <div className="circle"></div>
 
                     <div className="project-des">
-                        <h1>FASHION WEBSITE</h1>
+                        <h1>JOB TRACKER</h1>
                         <p>Coming soon</p>
 
                         <div className="ex-links">
