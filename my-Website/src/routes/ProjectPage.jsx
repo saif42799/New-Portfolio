@@ -5,11 +5,11 @@ function ProjectPage() {
 
     const projectSlides = {
         1:[
-            { src: '/images/project-1-screenshot-1.webp', title: "image-2" },
-            { src: '/images/project-1-screenshot-2.webp', title: "image-3" },
-            { src: '/images/project-1-screenshot-3.webp', title: "image-4" },
-            { src: '/images/project-1-screenshot-5.webp', title: "image-6" },
-            { src: '/images/project-1-screenshot-6.webp', title: "image-7" }
+            { src: '/images/project-1-screenshot-1.webp', title: "image-1" },
+            { src: '/images/project-1-screenshot-2.webp', title: "image-2" },
+            { src: '/images/project-1-screenshot-3.webp', title: "image-3" },
+            { src: '/images/project-1-screenshot-4.webp', title: "image-4" },
+            { src: '/images/project-1-screenshot-6.webp', title: "image-5" }
         ], 
         2:[
             { src: '/images/project-2-screenshot-1.webp', title: "image-1" },
